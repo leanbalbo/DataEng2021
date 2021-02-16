@@ -22,15 +22,6 @@ def row2vals(row):
 			row[key] = 0
 		row['County'] = row['County'].replace('\'','')  # eliminate quotes within literals
 
-	# census = ""
-	# citizen = ""
-	# if Year == 2015:
-	# 	census = "CensusTract"
-	# 	citizen = "Citizen"
-	# else:
-	# 	census = "TractId"
-	# 	citizen = "VotingAgeCitizen"
-
 	ret = f"""
        {Year},                          -- Year
        {row['CensusTract']},            -- CensusTract
